@@ -1,27 +1,44 @@
 <!DOCTYPE html>
+<!-- reading the source code is user error-->
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Web site created using create-snowpack-app" />
-    <link rel="stylesheet" type="text/css" href="/index.css" />
-    <title>Snowpack App</title>
-  </head>
-  <body>
-    <img id="img" src="/logo.svg" />
-    <canvas id="canvas"></canvas>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <script type="module" src="/dist/index.js"></script>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="user error" />
+  <link rel="stylesheet" type="text/css" href="/index.css" />
+  <title>user error</title>
+</head>
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
+<body class="flex ycenter xcenter" oncontextmenu="return false;">
+  <div class="card flex">
+    <div>
+      <div class="flex ycenter" id="metadata">
+        <img src="pfp.png" height="36" width="36">
+        <h1 id="author">Rain</h1><span id="timestamp" class="grey">Today at 20:16</span>
+      </div>
+      <p class="msg">
+        <noscript>having javascript disabled is </noscript>
+        <span id="action"></span>
+        user error
+      </p>
+    </div>
+  </div>
+  <footer>
+    <button class="flex ycenter" id="language">
+      <svg id="translate-icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"
+        fill="#000000">
+        <path d="M0 0h24v24H0V0z" fill="none" />
+        <path
+          d="M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z" />
+      </svg>
+      <span>Language</span>
+    </button>
+    <br>
+    <a href="https://github.com/EmeraldSnorlax/user-error">not open sourcing your code is user error</a>
+  </footer>
+  <script src="./dist/index.js" async defer></script>
+</body>
+
 </html>
