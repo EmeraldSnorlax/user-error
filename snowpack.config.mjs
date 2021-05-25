@@ -6,6 +6,16 @@ export default {
   },
   plugins: [
     [
+      'snowpack-plugin-minify-html',
+      {
+        htmlMinifierOptions: {
+          sortAttributes: true,
+          html5: true,
+          collapseWhitespace: true,
+        },
+      },
+    ],
+    [
       '@snowpack/plugin-typescript',
       {
         /* Yarn PnP workaround: see https://www.npmjs.com/package/@snowpack/plugin-typescript */
@@ -18,8 +28,10 @@ export default {
     // {"match": "routes", "src": ".*", "dest": "/index.html"},
   ],
   optimize: {
-    /* Example: Bundle your final build: */
-    // "bundle": true,
+    bundle: true,
+    minify: true,
+    treeshake: true,
+    target: 'es2019',
   },
   packageOptions: {
     /* ... */
