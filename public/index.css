@@ -27,7 +27,7 @@ p, div, h1, html, body {
 }
 
 .grey {
-  color: grey;
+  color: silver;
 }
 
 .card {
@@ -64,7 +64,6 @@ footer {
   position: absolute;
   bottom: 0;
   margin: 1em;
-  width: 75%;
 }
 
 button {
@@ -88,4 +87,43 @@ button:hover {
 img {
   border-radius: 999px;
   margin-right: 0.67rem;
+}
+
+a {
+  color: #66baff;
+  text-decoration: none;
+  position: relative;
+}
+
+a:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  visibility: hidden;
+  transition: all 0.2s ease-in-out;
+  background-color: #2195f2;
+}
+
+a:hover:before {
+  visibility: visible;
+  width: 100%;
+}
+
+a:after {
+  content: "→";
+  font-size: medium;
+  right: -1.25rem;
+  position: absolute;
+  transition: all 0.2s ease-in-out;
+}
+
+h1 > a:after {
+  top: 1em;
+}
+
+a:hover:after {
+  transform: translateX(12px);
 }
