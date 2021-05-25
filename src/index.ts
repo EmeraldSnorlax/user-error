@@ -11,7 +11,7 @@ setTimeout(() => {
   });
   
   document.addEventListener('mousemove', (e) => {
-    if (e.movementX > 40 || e.movementX > 40)
+    if (e.movementX > 40 || e.movementY > 40)
     action.innerText = 'moving the mouse too quickly is';
   });
   
