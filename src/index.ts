@@ -7,7 +7,8 @@ setTimeout(() => {
   action.innerText = 'doing nothing is';
 
   document.addEventListener('keypress', (e) => {
-    action.innerText = `pressing ${e.key} is`;
+    if (e.key === ' ') action.innerText = 'pressing space is';
+    else action.innerText = `pressing ${e.key.toLowerCase()} is`;
   });
   
   document.addEventListener('mousemove', (e) => {
