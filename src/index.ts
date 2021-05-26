@@ -3,6 +3,12 @@ console.log('opening the console is user error');
 const action = document.getElementById('action')!;
 const grace = 1500;
 
+if (navigator) {
+  if (navigator.userAgent) {
+    if (/iPhone|iPad/.test(navigator.userAgent)) action.innerText = 'using iOS is';
+  }
+}
+
 setTimeout(() => {
   action.innerText = 'doing nothing is';
 
