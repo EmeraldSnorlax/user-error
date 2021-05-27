@@ -1,5 +1,9 @@
 # User error
 
+![GitHub](https://img.shields.io/github/license/EmeraldSnorlax/user-error?label=proprietary%20software%20is%20user%20error)
+[![CodeFactor](https://www.codefactor.io/repository/github/emeraldsnorlax/user-error/badge)](https://www.codefactor.io/repository/github/emeraldsnorlax/user-error)
+
+
 reading the readme is user error
 
 ## Available Scripts
