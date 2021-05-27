@@ -8,7 +8,7 @@ reading the readme is user error
 
 ## Available Scripts
 
-### yarn start
+### yarn dev
 
 Runs the app in the development mode.
 
