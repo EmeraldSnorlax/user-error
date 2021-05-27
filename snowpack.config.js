@@ -1,7 +1,7 @@
 /** @type {import("snowpack").SnowpackUserConfig } */
-export default {
+module.exports = {
   mount: {
-    public: { url: '/', static: true },
+    public: { url: '/' },
     src: { url: '/dist' },
   },
   plugins: [
@@ -31,15 +31,17 @@ export default {
     bundle: true,
     minify: true,
     treeshake: true,
-    target: 'es2019',
+    target: 'es2018',
+    sourcemap: true,
+    splitting: false,
   },
   packageOptions: {
     /* ... */
   },
   devOptions: {
-    /* ... */
+    port: 8090,
   },
   buildOptions: {
-    /* ... */
+    clean: true,
   },
 };
