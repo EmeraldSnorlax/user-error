@@ -1,20 +1,18 @@
 {
+  "name": "user-error",
+  "version": "0.0.0",
   "scripts": {
-    "start": "snowpack dev",
-    "build": "snowpack build"
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "serve": "vite preview"
   },
-  "dependencies": {},
   "devDependencies": {
-    "@snowpack/plugin-typescript": "^1.2.1",
-    "@snowpack/plugin-webpack": "^2.3.1",
-    "@types/snowpack-env": "^2.3.3",
     "@typescript-eslint/eslint-plugin": "^4.25.0",
     "@typescript-eslint/parser": "^4.25.0",
     "eslint": "^7.27.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.23.3",
-    "snowpack": "^3.3.7",
-    "snowpack-plugin-minify-html": "^0.1.1",
-    "typescript": "^4.2.4"
+    "typescript": "^4.2.3",
+    "vite": "^2.3.4"
   }
 }

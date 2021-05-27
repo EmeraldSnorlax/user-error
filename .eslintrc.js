@@ -16,4 +16,9 @@ module.exports = {
   ],
   rules: {
   },
+  'import/resolver': {
+    node: {
+      extensions: ['.js', '.jsx', '.ts', '.tsx'],
+    },
+  },
 };

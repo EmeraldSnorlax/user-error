@@ -5,7 +5,8 @@ console.log('opening the console is user error');
 
 const action = document.getElementById('action')!;
 const grace = 1500;
-keypress.init(action);
+
+keypress.init((e: string) => { action.innerText = e; });
 if (/iPhone|iPad/.test(navigator.userAgent)) action.innerText = 'using iOS is';
 
 setTimeout(() => {
