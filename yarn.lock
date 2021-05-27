@@ -69,6 +69,11 @@
   resolved "https://registry.yarnpkg.com/@types/json5/-/json5-0.0.29.tgz#ee28707ae94e11d2b827bcbe5270bcea7f3e71ee"
   integrity sha1-7ihweulOEdK4J7y+UnC86n8+ce4=
 
+"@types/platform@^1.3.3":
+  version "1.3.3"
+  resolved "https://registry.yarnpkg.com/@types/platform/-/platform-1.3.3.tgz#a3d23941770d320e2c4312516a442ab35210d019"
+  integrity sha512-1fuOulBHWIxAPLBtLms+UtbeRDt6rL7gP5R+Yugfzdg+poCLxXqXTE8i+FpYeiytGRLUEtnFkjsY/j+usbQBqw==
+
 "@typescript-eslint/eslint-plugin@^4.25.0":
   version "4.25.0"
   resolved "https://registry.yarnpkg.com/@typescript-eslint/eslint-plugin/-/eslint-plugin-4.25.0.tgz#d82657b6ab4caa4c3f888ff923175fadc2f31f2a"
@@ -1222,6 +1227,11 @@ pkg-up@^2.0.0:
   integrity sha1-yBmscoBZpGHKscOImivjxJoATX8=
   dependencies:
     find-up "^2.1.0"
+
+platform@^1.3.6:
+  version "1.3.6"
+  resolved "https://registry.yarnpkg.com/platform/-/platform-1.3.6.tgz#48b4ce983164b209c2d45a107adb31f473a6e7a7"
+  integrity sha512-fnWVljUchTro6RiCFvCXBbNhJc2NijN7oIQxbwsyL0buWJPG85v81ehlHI9fXrJsMNgTofEoWIQeClKpgxFLrg==
 
 postcss@^8.2.10:
   version "8.3.0"

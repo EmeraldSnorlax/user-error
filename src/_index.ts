@@ -1,49 +1,30 @@
-import keypress from './keypress';
+import beforeUnload from './beforeUnload';
+import click from './click';
+import ctxMenu from './ctxMenu';
+import keyPress from './keyPress';
+import language from './language';
+import mouseMove from './mouseMove';
+import userAgent from './userAgent';
+
+const action = document.getElementById('action')!;
+
+// Default to the user's platform
+const timeout = 2000;
+let lastUpdate = Date.now();
+function updateAction(update: string): void {
+  action.innerText = update;
+  lastUpdate = Date.now();
+}
+setInterval(() => {
+  if ((Date.now() - lastUpdate) > timeout) {
+    userAgent((update: string) => updateAction(update));
+  }
+}, 200);
+
+// Add listeners
+[beforeUnload, click, ctxMenu, keyPress, language, mouseMove].forEach((listener) => {
+  listener((update: string) => updateAction(update));
+});
 
 // eslint-disable-next-line no-console
 console.log('opening the console is user error');
-
-const action = document.getElementById('action')!;
-const grace = 1500;
-
-keypress.init((e: string) => { action.innerText = e; });
-if (/iPhone|iPad/.test(navigator.userAgent)) action.innerText = 'using iOS is';
-
-setTimeout(() => {
-  action.innerText = 'doing nothing is';
-
-  document.addEventListener('mousemove', (e) => {
-    if (e.movementX > 40 || e.movementY > 40) action.innerText = 'moving the mouse too quickly is';
-  });
-
-  document.addEventListener('click', (e) => {
-    let button;
-    // eslint-disable-next-line default-case
-    switch (e.button) {
-      case 0:
-        button = 'left';
-        break;
-      case 1:
-        button = 'middle';
-        break;
-    }
-    action.innerText = `${button} clicking is`;
-  });
-
-  document.addEventListener('contextmenu', () => {
-    action.innerText = 'right clicking is';
-  });
-}, grace);
-
-document.getElementById('language')!.addEventListener('click', () => {
-  // Prevent left click overwriting it
-  setTimeout(() => {
-    action.innerText = `${window.navigator.language} is`;
-  }, 10);
-});
-
-window.addEventListener('beforeunload', (e) => {
-  e.preventDefault();
-  action.innerText = 'closing the tab is';
-  e.returnValue = '';
-});
