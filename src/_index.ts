@@ -28,4 +28,4 @@ setInterval(() => {
 
 // eslint-disable-next-line no-console
 console.log('opening the console is user error');
-document.cookie = 'user_error=Browsing cookies is user error.'
+document.cookie = 'user_error=Browsing_cookies_is_user_error.'
